@@ -26,12 +26,13 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">LAPTOP-CQLUGN71</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJCEx0yqbq0GAWHO2wZMiQwAAAAACAAAAAAAQZgAAAAEAACAAAACi6uaWc37dmo8AmQHR5KvMvUqBNpwN6/M4n+S1rB9M6AAAAAAOgAAAAAIAACAAAAASQYzvh4P4D66bgPgMGieKtwIClKJfK9Fs0l0WkjpeBZAAAADSm0vPtSe+yRo7l2A3TBiYs5hxQg3/qkoE/MLimDHGiCmNEico1ul1czPLlOeu5qUz5pT81kVrFom8VmeAnSdbtq85Y4jYXJgK3Nfa9xqZZIA/9p7A2hYxg1uysvEs9K37IZeO5YyXkichdSPy6KHkX24R01oIqHae+86ILa5A2/yC0l9XW9aiW4NF1kP9RjpAAAAAi94dZNZ0pcS3XAtf4KnlqsKNexft2ND+T5gGoV9A7noYVak75OO5F63VtU8uCl1aLAjbW8oQvJ/Fj0+BaUdu2w==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAJCEx0yqbq0GAWHO2wZMiQwAAAAACAAAAAAAQZgAAAAEAACAAAABnnrAQRU/WMR9UTW0ntBPTqJADCOwLAz2tbhacJ288/gAAAAAOgAAAAAIAACAAAABpB0iEs70BwyglUi5Sdg1nkvja7H2iJnVtsderE3/0RpAAAABW5zI//tCV4gkrNzfyKvHNcJhsy9NpClWDD2+8OJIpEkqRUwxQykFyKDvy2KHa2YkxuB45DGUT4BrCb9yw3qW0jGpmVya14Yvy6v1bE4/OuucAW+9t0plXqN+4uFSIwZyAK7LtcognEW4vrdFZ56I9gBT6Fo/sPNRPUtR1FjL1Lai3sE2jRPHHmXsjtsuGMn5AAAAA2ZFJRfF76tsQVidwKRHZwe/qnocMhcdHumekAFo3vJPhnYCTOXUFlI/CKeYLR2COfVoTqWd9vgmu3rLa5dffrg==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
           <SSIS:Package SSIS:Name="CargaDim.dtsx" SSIS:EntryPoint="1" />
           <SSIS:Package SSIS:Name="CargaFato.dtsx" SSIS:EntryPoint="1" />
+          <SSIS:Package SSIS:Name="CargaDataWarehouse.dtsx" SSIS:EntryPoint="1" />
         </SSIS:Packages>
         <SSIS:ConnectionManagers />
         <SSIS:DeploymentInfo>
@@ -43,10 +44,10 @@
                 <SSIS:Property SSIS:Name="Name">CargaDim</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">40</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">41</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{E6819209-CDDE-463A-9F02-CED5249C4207}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F5343519-3D1B-4A8B-927F-69E757C0B5E2}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1037,10 +1038,10 @@
                 <SSIS:Property SSIS:Name="Name">CargaFato</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">5</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">12</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{1AF932F3-7DFF-49DB-B9C0-35A3992B8AE3}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{5C758541-27F8-4446-9315-398181FDF81F}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -1276,6 +1277,80 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+              </SSIS:Parameters>
+            </SSIS:PackageMetaData>
+            <SSIS:PackageMetaData SSIS:Name="CargaDataWarehouse.dtsx">
+              <SSIS:Properties>
+                <SSIS:Property SSIS:Name="ID">{1538CDED-05D0-4737-BA15-E381E678C9BB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="Name">CargaDataWarehouse</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">2</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionComments">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{58AA0541-FAAD-4E01-873E-AA8E8E916DEB}</SSIS:Property>
+                <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
+                <SSIS:Property SSIS:Name="Description">
+                </SSIS:Property>
+                <SSIS:Property SSIS:Name="ProtectionLevel">1</SSIS:Property>
+              </SSIS:Properties>
+              <SSIS:Parameters>
+                <SSIS:Parameter SSIS:Name="Ano_Final">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{B924C4B2-C418-4071-A885-6BE9DF93B6C9}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">2014</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="Ano_Inicial">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{C7CE658E-18E0-4B9B-AFDD-154835E3BCB0}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">2014</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="Mes_Final">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{429468A6-D321-4A75-9B85-6EF52C1997C4}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">12</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="Mes_Inicial">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">{001D3CAF-B02F-47AD-82F0-ED47645C7368}</SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">1</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
