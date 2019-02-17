@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="CargaDim"
   DTS:PackageType="5"
-  DTS:VersionBuild="39"
-  DTS:VersionGUID="{DD8DFDF0-9D98-49E4-8C2C-53F9F5B5E1A6}">
+  DTS:VersionBuild="40"
+  DTS:VersionGUID="{E6819209-CDDE-463A-9F02-CED5249C4207}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -10589,6 +10589,7 @@ SELECT'003' AS CODIGO, 'Fábrica do Nordeste' AS DESCRITOR</property>
       DTS:refId="Package\Criação Dimensão Tempo"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Tarefa Fluxo de Dados"
+      DTS:Disabled="True"
       DTS:DTSID="{BE6EE548-D35C-4E58-8A24-D6C7FBB869F4}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
